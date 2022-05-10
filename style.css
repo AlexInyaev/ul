@@ -1,0 +1,13 @@
+.ulProgress li {
+    list-style: none;
+    /* Убираем исходные маркеры */
+    /* background: url(images/dry-clean3.png) no-repeat 0 50%; */
+    /* Параметры фона */
+    padding-left: 24px;
+    /* Смещаем текст вправо */
+    margin-bottom: 30px;
+}
+
+.progressLi1 {
+    /* background: url(images/correct2.png) no-repeat 0 50%; */
+}
