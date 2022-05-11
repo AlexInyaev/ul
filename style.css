@@ -1,13 +1,48 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.unOrder {
+    width: 300px;
+}
+
 .ulProgress li {
-    list-style: none;
+    /* list-style: none; */
     /* Убираем исходные маркеры */
     /* background: url(images/dry-clean3.png) no-repeat 0 50%; */
     /* Параметры фона */
     padding-left: 24px;
     /* Смещаем текст вправо */
     margin-bottom: 30px;
+    position: relative;
 }
 
-.progressLi1 {
-    /* background: url(images/correct2.png) no-repeat 0 50%; */
+.ulProgress {
+    list-style: none;
+    margin: 30px;
+    max-width: 600px;
+}
+
+/* отрисовка линий между маркерами */
+.progressLi1::after,
+.progressLi2::after,
+.progressLi3::after,
+.progressLi4::after,
+.progressLi5::after {
+    content: '';
+    position: absolute;
+    left: 7px;
+    width: 2px;
+    height: 28px;
+    top: 19px;
+    background: #4BAE4F;
+}
+
+/* стилизация картинок грузовиков */
+.startImg,
+.finishImg {
+    width: 100px;
+    margin-left: 30px;
+
 }
