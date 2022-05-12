@@ -4,13 +4,10 @@
 }
 
 .unOrder {
-    width: 300px;
+    min-width: 300px;
 }
 
 .ulProgress li {
-    /* Убираем исходные маркеры */
-    /* background: url(images/dry-clean3.png) no-repeat 0 50%; */
-    /* Параметры фона */
     padding-left: 24px;
     /* Смещаем текст вправо */
     margin-bottom: 30px;
@@ -20,7 +17,6 @@
 .ulProgress {
     list-style: none;
     margin: 30px;
-    max-width: 600px;
 }
 
 /* отрисовка линий между маркерами */
@@ -33,8 +29,22 @@
     position: absolute;
     left: 7px;
     width: 2px;
-    height: 28px;
+    height: 14px;
     top: 19px;
+    background: #4BAE4F;
+}
+
+.progressLi2::before,
+.progressLi3::before,
+.progressLi4::before,
+.progressLi5::before,
+.progressLi6::before {
+    content: '';
+    position: absolute;
+    left: 7px;
+    width: 2px;
+    height: 14px;
+    top: -15px;
     background: #4BAE4F;
 }
 
@@ -43,4 +53,10 @@
 .finishImg {
     width: 100px;
     margin-left: 30px;
+}
+
+/* окраска элементов */
+.makeColorLineForActiveElements::before,
+.makeColorLineForActiveElements::after {
+    background: #4D4D4D;
 }
