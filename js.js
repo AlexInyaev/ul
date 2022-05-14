@@ -1,13 +1,16 @@
 
 function drawMarker(index) {
-    let progressCollection = document.querySelectorAll('li');
+    let progressCollection = document.querySelectorAll('.progressLi');
+
     for (let i = 0; i < progressCollection.length; i++) {
         if (i < index) {
-            progressCollection[i].style.background = "url(images/correct2.png) no-repeat 0 50%";
+
+            progressCollection[i].classList.add('progressLiFinished');
 
         } else {
-            progressCollection[i].style.background = "url(images/dry-clean3.png) no-repeat 0 50%";
-            progressCollection[i].classList.add('makeColorLineForActiveElements');
+
+            progressCollection[i].classList.add('makeColorLineForActiveElements', 'progressLiNotStarted');
+
         }
     }
 
