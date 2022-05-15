@@ -4,24 +4,33 @@
 }
 
 .unOrder {
-    width: 300px;
+    min-width: 300px;
 }
 
-.ulProgress li {
-    /* list-style: none; */
-    /* Убираем исходные маркеры */
-    /* background: url(images/dry-clean3.png) no-repeat 0 50%; */
-    /* Параметры фона */
+.progressLi {
+    list-style: none;
     padding-left: 24px;
-    /* Смещаем текст вправо */
     margin-bottom: 30px;
     position: relative;
+    background-size: contain;
+    background-origin: 0 50%;
+    background-repeat: no-repeat;
+}
+
+.progressLiFinished {
+    /* background-image: url(https://cdn-icons.flaticon.com/png/512/4315/premium/4315445.png?token=exp=1652553387~hmac=10a60d7db7b3e82d374b9b967c770409); */
+    background-image: url(images/correct2.png);
+}
+
+.progressLiNotStarted {
+    /* background-image: url(https://cdn-icons-png.flaticon.com/512/481/481078.png); */
+    background-image: url(images/dry-clean3.png);
 }
 
 .ulProgress {
-    list-style: none;
+
     margin: 30px;
-    max-width: 600px;
+
 }
 
 /* отрисовка линий между маркерами */
@@ -34,8 +43,22 @@
     position: absolute;
     left: 7px;
     width: 2px;
-    height: 28px;
+    height: 14px;
     top: 19px;
+    background: #4BAE4F;
+}
+
+.progressLi2::before,
+.progressLi3::before,
+.progressLi4::before,
+.progressLi5::before,
+.progressLi6::before {
+    content: '';
+    position: absolute;
+    left: 7px;
+    width: 2px;
+    height: 14px;
+    top: -15px;
     background: #4BAE4F;
 }
 
@@ -44,5 +67,10 @@
 .finishImg {
     width: 100px;
     margin-left: 30px;
+}
 
+/* окраска элементов */
+.makeColorLineForActiveElements::before,
+.makeColorLineForActiveElements::after {
+    background: #4D4D4D;
 }
